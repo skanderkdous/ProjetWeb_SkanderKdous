@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* En-tête */
+header {
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.titre-site {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    color: #ffd700;
+}
+
+/* Bouton burger : caché sur ordinateur */
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Carrousel */
+.caroussel {
+    position: relative;
+    max-width: 900px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.caroussel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.caroussel li {
+    display: none;
+}
+
+.caroussel li.active {
+    display: block;
+    animation: apparition 0.8s; /* fondu à chaque changement d'image */
+}
+
+@keyframes apparition {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.caroussel img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.caroussel h2,
+.caroussel p {
+    padding: 0 10px;
+}
+
+.fleche {
+    position: absolute;
+    top: 40%;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.gauche { left: 10px; }
+.droite { right: 10px; }
+
+.points {
+    text-align: center;
+    padding: 10px;
+}
+
+.point {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+}
+
+.point.active {
+    background: #c8102e;
+}
+
+/* Contenu */
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+}
+
+section img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+/* Cartes */
+.conteneur-cartes {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    text-align: center;
+}
+
+.conteneur-cartes img {
+    height: 200px;
+}
+
+.bouton {
+    display: inline-block;
+    background: #c8102e;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    text-decoration: none;
+    font-family: inherit;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.bouton:hover {
+    transform: scale(1.05);
+}
+
+/* Formulaire */
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.erreur { color: #c8102e; }
+.succes { color: green; }
+
+/* Pied de page */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer nav ul {
+    justify-content: center;
+}
+
+/* ===== TÉLÉPHONE (écran de moins de 700px) ===== */
+@media (max-width: 700px) {
+    .burger {
+        display: block;
+    }
+
+    /* Le menu est caché, il s'ouvre avec le bouton burger */
+    header nav {
+        display: none;
+        width: 100%;
+    }
+
+    header nav.ouvert {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .caroussel img {
+        height: 250px;
+    }
+
+    section {
+        margin: 10px;
+    }
+
+    .conteneur-cartes {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+section img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
