@@ -1,0 +1,175 @@
+<!DOCTYPE html><!-- Version 5 de HTML -->
+<html lang="fr"><!-- Précision de la langue pour le navigateur -->
+    <head><!-- Entête du document -->
+        <meta charset="UTF-8"><!-- Encodage des caractères en UTF-8 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Affichage adapté aux téléphones -->
+        <meta name="description" content="Site consacré à Cristiano Ronaldo : sa carrière, ses statistiques et son palmarès."><!-- Description pour les moteurs de recherche -->
+        <meta name="author" content="Skander KDOUS"><!-- Auteur du site -->
+        <title>Accueil | CR7 - La Légende</title><!-- Titre de l'onglet -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css"><!-- Lien vers la feuille de style -->
+        <script src="js/menu.js" defer></script>
+        <script src="js/carousel.js" defer></script>
+    </head><!-- Fin entête -->
+
+    <body><!-- Début du code de la page -->
+
+        <!-- ===== EN-TÊTE ===== -->
+        <header>
+            <a href="index.html" class="logo">
+                <img src="img/cr7_logo.jpg" alt="Logo CR7">
+                <span class="titre-site">CR7 - La Légende</span>
+            </a>
+            <!-- Bouton du menu sur téléphone (géré par menu.js) -->
+            <button type="button" class="burger" aria-label="Ouvrir le menu" aria-expanded="false">&#9776;</button>
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Accueil</a></li>
+                    <li><a href="pages/carriere.html">Carrière</a></li>
+                    <li><a href="pages/palmares.html">Palmarès</a></li>
+                    <li><a href="pages/apropos.html">À propos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ===== CONTENU PRINCIPAL ===== -->
+        <main>
+
+            <!-- ===== CARROUSEL ===== -->
+            <div class="caroussel" role="region" aria-roledescription="carrousel" aria-label="Les grandes étapes de CR7">
+                <ul>
+                    <li class="active">
+                        <img src="img/slide1.jpg" alt="Cristiano Ronaldo sous le maillot du Sporting Lisbonne">
+                        <h2>Les débuts</h2>
+                        <p>De Madère au Sporting Lisbonne, le rêve commence.</p>
+                    </li>
+                    <li>
+                        <img src="img/slide2.jpg" alt="Cristiano Ronaldo sous le maillot de Manchester United">
+                        <h2>Manchester United</h2>
+                        <p>Le premier Ballon d'Or en 2008.</p>
+                    </li>
+                    <li>
+                        <img src="img/slide3.jpg" alt="Cristiano Ronaldo sous le maillot du Real Madrid">
+                        <h2>Real Madrid</h2>
+                        <p>Neuf saisons, 450 buts, meilleur buteur de l'histoire du club.</p>
+                    </li>
+                    <li>
+                        <img src="img/slide4.jpg" alt="Cristiano Ronaldo sous le maillot du Portugal">
+                        <h2>Portugal</h2>
+                        <p>Champion d'Europe 2016, le rêve d'une nation.</p>
+                    </li>
+                </ul>
+                <!-- type="button" et aria-label : les flèches sont lisibles par les lecteurs d'écran -->
+                <button type="button" class="fleche gauche" aria-label="Image précédente">&#10094;</button>
+                <button type="button" class="fleche droite" aria-label="Image suivante">&#10095;</button>
+                <div class="points"></div><!-- Les points sont ajoutés par le JavaScript -->
+            </div>
+
+            <!-- ===== PRÉSENTATION ===== -->
+            <section>
+                <h1>Qui est Cristiano Ronaldo ?</h1>
+                <p>Né le <time datetime="1985-02-05">5 février 1985</time> à Funchal, sur l'île de Madère, Cristiano Ronaldo est considéré comme l'un des plus grands footballeurs de l'histoire. Par son travail acharné et sa détermination, il a battu de nombreux records et remporté les plus grands trophées.</p>
+
+                <h2>Carrière professionnelle en club</h2>
+
+                <table id="table-stats">
+                    <caption>Matchs joués et buts marqués par club</caption><!-- Titre du tableau -->
+                    <thead>
+                        <tr>
+                            <th scope="col">Club</th>
+                            <th scope="col">Années</th>
+                            <th scope="col">Matchs</th>
+                            <th scope="col">Buts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Sporting Portugal</th>
+                            <td>2002-2003</td>
+                            <td>31</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Manchester United</th>
+                            <td>2003-2009</td>
+                            <td>292</td>
+                            <td>118</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Real Madrid</th>
+                            <td>2009-2018</td>
+                            <td>438</td>
+                            <td>450</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Juventus FC</th>
+                            <td>2018-2021</td>
+                            <td>134</td>
+                            <td>101</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Manchester United</th>
+                            <td>2021-2022</td>
+                            <td>54</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Al-Nassr FC</th>
+                            <td>Depuis 2023</td>
+                            <td>160</td>
+                            <td>138</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row">Total</th>
+                            <td>Depuis 2002</td>
+                            <td>1109</td>
+                            <td>839</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+
+            <!-- ===== CARTES DE NAVIGATION ===== -->
+            <section class="cartes">
+                <h2>Découvrir le site</h2>
+
+                <article class="conteneur-cartes"><!-- article : chaque carte est un bloc indépendant -->
+                    <img src="img/slide5.jpg" alt="Cristiano Ronaldo à Manchester United">
+                    <h3>Carrière</h3>
+                    <p>Revivez son parcours club par club.</p>
+                    <a href="pages/carriere.html" class="bouton">Découvrir la carrière</a>
+                </article>
+
+                <article class="conteneur-cartes">
+                    <img src="img/slide6.jpg" alt="Cristiano Ronaldo au Real Madrid">
+                    <h3>Palmarès</h3>
+                    <p>Tous ses trophées et records.</p>
+                    <a href="pages/palmares.html" class="bouton">Voir le palmarès</a>
+                </article>
+
+                <article class="conteneur-cartes">
+                    <img src="img/slide8.jpg" alt="Cristiano Ronaldo avec le Portugal">
+                    <h3>À propos</h3>
+                    <p>Le projet et le formulaire de contact.</p>
+                    <a href="pages/apropos.html" class="bouton">Me contacter</a>
+                </article>
+            </section>
+
+        </main><!-- Fin du contenu principal -->
+
+        <!-- ===== PIED DE PAGE ===== -->
+        <footer>
+            <nav aria-label="Liens du pied de page">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="pages/apropos.html">À propos</a></li>
+                </ul>
+            </nav>
+            <p>&copy; 2026 - Projet Web - Skander KDOUS</p>
+        </footer>
+    </body>
+</html>
