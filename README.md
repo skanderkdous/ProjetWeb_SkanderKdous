@@ -23,7 +23,7 @@ https://github.com/skanderkdous/ProjetWeb_SkanderKdous
 - Vérification du formulaire de contact
 
 ## Maquette
-`maquette/Projet_CR7.pdf` (réalisée sur Figma)
+`Maquette.pdf` (réalisée sur Figma)
 
 ## Lancer le site
 Ouvrir `index.html` dans un navigateur.
