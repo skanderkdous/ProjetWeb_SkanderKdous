@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>À propos | CR7 - La Légende</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/menu.js" defer></script>
+        <script src="../js/formulaire.js" defer></script>
+    </head>
+
+    <body>
+
+        <!-- ===== EN-TÊTE ===== -->
+        <header>
+            <a href="../index.html" class="logo">
+                <img src="../img/cr7_logo.jpg" alt="Logo CR7">
+                <span class="titre-site">CR7 - La Légende</span>
+            </a>
+            <!-- Bouton du menu sur téléphone (géré par menu.js) -->
+            <button type="button" class="burger" aria-label="Ouvrir le menu" aria-expanded="false">&#9776;</button>
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="carriere.html">Carrière</a></li>
+                    <li><a href="palmares.html">Palmarès</a></li>
+                    <li><a href="apropos.html" aria-current="page">À propos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- ===== LE PROJET ===== -->
+            <section>
+                <h1>À propos du projet</h1>
+                <p>Ce site a été réalisé dans le cadre d'un projet de développement web. L'objectif était de créer un site complet sur un thème de mon choix, en utilisant uniquement HTML, CSS et un peu de JavaScript.</p>
+                <p>J'ai choisi Cristiano Ronaldo, car sa carrière offre beaucoup de contenu à présenter : des statistiques, des trophées, des records et une histoire marquante.</p>
+            </section>
+
+            <!-- ===== L'AUTEUR ===== -->
+            <section>
+                <h2>L'auteur</h2>
+                <article>
+                    <h3>Skander KDOUS</h3>
+                    <p>J'ai réalisé ce projet seul, de A à Z :</p>
+                    <ul>
+                        <li>le choix du thème et l'organisation du site en quatre pages ;</li>
+                        <li>la recherche des informations et la rédaction des textes ;</li>
+                        <li>la structure HTML de toutes les pages ;</li>
+                        <li>la feuille de style CSS ;</li>
+                        <li>les scripts JavaScript (carrousel, menu sur téléphone, vérification du formulaire) ;</li>
+                        <li>la maquette du site et la gestion du dépôt Git ;</li>
+                        <li>le tableau des statistiques et le formulaire de contact.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- ===== INFOS TECHNIQUES ===== -->
+            <section>
+                <h2>Comment le site a été fait</h2>
+                <ul>
+                    <li><strong>HTML5</strong> : structure des pages avec des balises sémantiques (header, nav, main, section, article, footer).</li>
+                    <li><strong>CSS3</strong> : mise en page avec Flexbox et design responsive grâce aux media queries.</li>
+                    <li><strong>JavaScript</strong> : carrousel automatique sur l'accueil, menu « burger » sur téléphone et vérification du formulaire de contact.</li>
+                    <li><strong>Validation</strong> : toutes les pages HTML et la feuille CSS passent le validateur du W3C.</li>
+                    <li><strong>Git</strong> : le projet est versionné sur GitHub.</li>
+                    <li><strong>Police</strong> : Poppins, depuis Google Fonts.</li>
+                </ul>
+            </section>
+
+            <!-- ===== À SIGNALER ===== -->
+            <section>
+                <h2>À signaler</h2>
+                <ul>
+                    <li>Ce site est un projet scolaire, sans but commercial. Il n'a aucun lien officiel avec Cristiano Ronaldo ni avec ses clubs.</li>
+                    <li>Les images appartiennent à leurs auteurs respectifs et sont utilisées uniquement dans un cadre pédagogique.</li>
+                    <li>Les statistiques sont à jour en novembre 2026 et peuvent évoluer, car Cristiano Ronaldo joue toujours en club.</li>
+                    <li>Le formulaire ci-dessous est vérifié en JavaScript, mais le message n'est pas réellement envoyé : il n'est relié à aucun serveur.</li>
+                </ul>
+            </section>
+
+            <!-- ===== FORMULAIRE DE CONTACT ===== -->
+            <section>
+                <h2>Me contacter</h2>
+                <form action="#" method="post" id="formulaire" novalidate>
+                    <p>
+                        <label for="nom">Nom :</label><br>
+                        <input type="text" id="nom" name="nom" required>
+                    </p>
+                    <p>
+                        <label for="email">E-mail :</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+                    <p>
+                        <label for="message">Message :</label><br>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </p>
+                    <button type="submit" class="bouton">Envoyer</button>
+                    <p id="message-form" class="message-form" aria-live="polite"></p>
+                </form>
+            </section>
+        </main>
+
+        <!-- ===== PIED DE PAGE ===== -->
+        <footer>
+            <nav aria-label="Liens du pied de page">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                </ul>
+            </nav>
+            <p>&copy; 2026 - Projet Web - Skander KDOUS</p>
+        </footer>
+
+    </body>
+</html>
